@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "market_backend": {
+      "main": "src/market_backend/main.mo",
+      "type": "motoko"
+    },
+    "nft": {
+      "main": "src/NFT/nft.mo",
+      "type": "motoko"
+    },
+    "market_frontend": {
+      "dependencies": [
+        "market_backend"
+      ],
+      "source": [
+        "src/market_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "market_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
